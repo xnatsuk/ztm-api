@@ -9,9 +9,7 @@ export async function userProfile(request: Request, response: Response) {
     cache: true,
   });
 
-  if (user) {
-    response.status(200).json(user);
-  } else {
-    response.status(404).json("User not found");
-  }
+  user
+    ? response.status(200).json(user)
+    : response.status(404).json("User not found");
 }
