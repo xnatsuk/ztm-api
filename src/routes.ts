@@ -7,7 +7,7 @@ export const AppRoutes = [
   {
     path: "/login",
     method: "post",
-    // action: userLogin,
+    action: userLogin,
   },
   {
     path: "/register",
@@ -22,6 +22,6 @@ export const AppRoutes = [
   {
     path: "/image",
     method: "put",
-    //action: userEntries,
+    action: userEntries,
   },
 ];
