@@ -16,8 +16,11 @@ export class User {
   @Column("text", { nullable: false, unique: true })
   email: string;
 
-  @Column({ default: 0 })
-  entries: number;
+  @Column({ nullable: false })
+  hash: string;
+
+  @Column({ type: "integer", default: 0 })
+  entries: string;
 
   @CreateDateColumn()
   joined: Date;
