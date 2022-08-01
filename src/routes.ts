@@ -1,4 +1,4 @@
-import { userEntries } from "./controller/UserEntries";
+import { getUserScore, updateUserScore } from "./controller/UserScore";
 import { userLogin } from "./controller/UserLogin";
 import { userProfile } from "./controller/UserProfile";
 import { userRegister } from "./controller/UserRegister";
@@ -20,8 +20,14 @@ export const AppRoutes = [
     action: userProfile,
   },
   {
-    path: "/image",
+    path: "/score/:id",
     method: "put",
-    action: userEntries,
+    action: updateUserScore,
+  },
+
+  {
+    path: "/score/:id",
+    method: "get",
+    action: getUserScore,
   },
 ];

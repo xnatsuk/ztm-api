@@ -15,8 +15,8 @@ myDataSource
     const app = express();
     const jwt = expressjwt({
       secret: `${process.env.JWT_SECRET}`,
-      algorithms: ["RS512"],
-      credentialsRequired: false,
+      algorithms: ["HS256"],
+      credentialsRequired: true,
     }).unless({
       path: ["/login", "/register"],
     });

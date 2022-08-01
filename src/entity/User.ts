@@ -20,7 +20,7 @@ export class User {
   hash: string;
 
   @Column({ type: "integer", default: 0 })
-  entries: string;
+  entries: number;
 
   @CreateDateColumn()
   joined: Date;
