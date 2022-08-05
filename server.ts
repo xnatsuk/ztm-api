@@ -18,7 +18,7 @@ myDataSource
       algorithms: ["HS256"],
       credentialsRequired: true,
     }).unless({
-      path: ["/login", "/register"],
+      path: ["/login", "/register", "/image"],
     });
 
     app.use(cors());

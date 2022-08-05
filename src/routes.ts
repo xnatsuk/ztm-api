@@ -2,6 +2,7 @@ import { getUserScore, updateUserScore } from "./controller/UserScore";
 import { userLogin } from "./controller/UserLogin";
 import { userProfile } from "./controller/UserProfile";
 import { userRegister } from "./controller/UserRegister";
+import { handleApiCall } from "./controller/UserImage";
 
 export const AppRoutes = [
   {
@@ -29,5 +30,11 @@ export const AppRoutes = [
     path: "/score/:id",
     method: "get",
     action: getUserScore,
+  },
+
+  {
+    path: "/image",
+    method: "post",
+    action: handleApiCall,
   },
 ];
