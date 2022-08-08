@@ -1,4 +1,4 @@
-# ZTM Smart-Brain
+# ZTM Face-Recognition API
 
 Steps to run this project:
 
