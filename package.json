@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "server.ts",
   "scripts": {
-    "start": "tsnd --respawn server.ts",
+    "start": "server.ts",
     "typeorm": "typeorm-ts-node-commonjs"
   },
   "author": "xnatsuk <xnatsuk@gmail.com>",
