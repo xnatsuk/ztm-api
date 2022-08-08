@@ -9,5 +9,5 @@ export const myDataSource = new DataSource({
   database: process.env.DB_NAME,
   entities: ["src/entity/*.ts"],
   logging: false,
-  synchronize: true,
+  synchronize: false,
 });
