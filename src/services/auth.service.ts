@@ -1,5 +1,4 @@
 import { compareSync } from "bcrypt";
-
 import { User } from "../entity/User";
 import { IJwtDetails } from "./jwt.service";
 

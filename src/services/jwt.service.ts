@@ -1,10 +1,8 @@
-import { Request } from "express";
 import * as jwt from "jsonwebtoken";
-
+import { Request } from "express";
 import { User } from "../entity/User";
 
 const JWT_KEY = process.env.JWT_SECRET;
-
 export interface IJwtDetails {
   id: number;
   email: string;

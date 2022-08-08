@@ -1,28 +1,20 @@
 import "reflect-metadata";
+import * as dotenv from "dotenv";
+dotenv.config();
 import cors from "cors";
 import express from "express";
 import { Request, Response } from "express";
-import { expressjwt } from "express-jwt";
-
 import { AppRoutes } from "./src/routes";
 import { myDataSource } from "./src/app-data-source";
 
-const PORT = 3001;
+const PORT = process.env.PORT;
 
 myDataSource
   .initialize()
   .then(async () => {
     const app = express();
-    const jwt = expressjwt({
-      secret: `${process.env.JWT_SECRET}`,
-      algorithms: ["HS256"],
-      credentialsRequired: true,
-    }).unless({
-      path: ["/login", "/register", "/image"],
-    });
 
     app.use(cors());
-    app.use(jwt);
     app.use(express.json());
 
     AppRoutes.forEach((route) => {

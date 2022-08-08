@@ -20,7 +20,5 @@ export async function handleApiCall(request: Request, response: Response) {
       inputs: [{ data: { image: { url: imageUrl } } }],
     })
     .then((output) => response.status(200).json(output.data))
-    .catch(() =>
-      response.status(400).json({ message: "Error during Clarifai API call" })
-    );
+    .catch((error) => response.status(400).json(error));
 }

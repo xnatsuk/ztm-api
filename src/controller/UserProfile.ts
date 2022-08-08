@@ -1,5 +1,4 @@
 import { Request, Response } from "express";
-
 import UserService from "../services/user.service";
 
 export async function userProfile(request: Request, response: Response) {

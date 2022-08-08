@@ -1,5 +1,4 @@
 import { hashSync } from "bcrypt";
-
 import { User } from "../entity/User";
 import { myDataSource } from "../app-data-source";
 
