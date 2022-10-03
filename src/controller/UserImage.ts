@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import axios from "axios";
 
-export async function handleApiCall(request: Request, response: Response) {
+export function handleApiCall(request: Request, response: Response) {
   const API_URL = "https://api.clarifai.com/v2/models/face-detection/outputs";
   const USER_ID = process.env.USER_ID;
   const PAT = process.env.PAT;
@@ -11,7 +11,7 @@ export async function handleApiCall(request: Request, response: Response) {
 
   axios.defaults.headers.common["Authorization"] = `Key ${PAT}`;
 
-  return await axios
+  return axios
     .post(API_URL, {
       user_app_id: {
         user_id: USER_ID,

@@ -9,7 +9,8 @@ export async function userLogin(request: Request, response: Response) {
   const token = JwtService.generateToken(user);
   const validatePassword = AuthService.isValidPassword(password, user);
 
-  if (!user || user === null) response.status(401).json("Invalid credentials");
+  if (!user || user === null)
+    return response.status(401).json("Invalid credentials");
 
   if (!validatePassword)
     return response.status(401).json("Invalid credentials");

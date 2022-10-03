@@ -11,7 +11,7 @@ const PORT = process.env.PORT;
 
 myDataSource
   .initialize()
-  .then(async () => {
+  .then(() => {
     const app = express();
 
     app.use(cors());
