@@ -8,13 +8,14 @@ import { AppRoutes } from "./src/routes";
 import { myDataSource } from "./src/app-data-source";
 
 const PORT = process.env.PORT;
+const CLIENT = process.env.CLIENT_URL;
 
 myDataSource
   .initialize()
   .then(() => {
     const app = express();
 
-    app.use(cors());
+    app.use(cors({ origin: CLIENT }));
     app.use(express.json());
 
     AppRoutes.forEach((route) => {
